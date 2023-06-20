@@ -1,0 +1,39 @@
+.navbar {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.logoLink {
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 600;
+    font-style: italic;
+    color: #9e1126;
+    font-family: 'MuseoModerno', cursive;
+}
+
+.navbarList {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 35px;
+}
+
+.listItem {
+    list-style-type: none;
+}
+
+.itemLink {
+    text-decoration: none;
+    color: rgb(229 228 228);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.itemLink:hover {
+    border-bottom: 1px solid #9e1126;
+}
