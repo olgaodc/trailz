@@ -1,0 +1,123 @@
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.infoSectionWrapper {
+    margin-bottom: 130px;
+}
+
+.infoSection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 120px;
+    margin-bottom: 120px;
+}
+
+.infoSectionTitle {
+    margin: 0 0 40px;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+.infoCard {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.infoCardTitle {
+    max-width: 180px;
+    line-height: 125%;
+    color: #D05525;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.aboutSection {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.aboutSectionTitleWrapper {
+    max-width: 600px;
+}
+
+.aboutSectionTitle {
+    margin: 0;
+    font-size: 80px;
+    line-height: 120%;
+}
+
+.aboutSectionDescription {
+    margin: 30px 0 0;
+    max-width: 450px;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.aboutSectionImage {
+    display: block;
+    max-width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+@media (max-width: 992px) {
+    .infoSection {
+        gap: 40px 60px;
+    }
+
+    .infoCard {
+        width: 160px;
+    }
+
+    .aboutSection {
+        gap: 40px;
+    }
+
+    .aboutSectionTitle {
+        font-size: 56px;
+    }
+
+    .aboutSectionDescription {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 790px) {
+    .aboutSection {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .aboutSectionTitleWrapper {
+        align-self: flex-start;
+    }
+    
+    .aboutSectionImage {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 531px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .aboutSectionTitle {
+        font-size: 46px;
+    }
+
+}
+
+@media (max-width: 421px) {
+    .infoCard {
+        width: 70%;
+    }
+}

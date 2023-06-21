@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  min-width: 342px;
   background-color: #161815;
   font-family: 'Prompt', sans-serif;
   color: rgb(229 228 228);

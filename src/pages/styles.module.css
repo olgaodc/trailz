@@ -1,7 +1,7 @@
 .container {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 40px;
 }
 
 .bgImage {
@@ -30,19 +30,25 @@
 }
 
 .heroBox {
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    max-width: 540px;
+    justify-content: center;
+    height: calc(100vh - 81px);
+    gap: 30px;
+    max-width: 620px;
 }
 
 .heroBoxTitle {
     margin: 0;
-    font-size: 70px;
-    max-width: 600px;
-    line-height: 140%;
+    font-size: 80px;
+    line-height: 130%;
+}
+
+.heroBoxDescription {
+    margin: 0 0 10px;
+    max-width: 450px;
+    line-height: 25px;
+    font-size: 18px;
 }
 
 .heroBoxButton {
@@ -53,16 +59,48 @@
     font-family: 'Prompt', sans-serif;
     font-size: 16px;
     padding: 8px 15px;
-    max-width: 120px;
+    max-width: 150px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .heroBoxButton:hover {
-    background-color: rgba(255, 255, 255, 0.527);
+    background-color: #D05525;
+    border: 2px solid #D05525;
 }
 
 
 .tripsSectionWrapper {
-    margin-top: 100px;
+    margin: 80px 0 120px;
+    padding-top: 30px;
+}
+
+.tripsTitle {
+    margin: 0 0 40px;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+.tripsSection {
+    display: flex;
+    gap: 50px 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 790px) {
+    .bgImage {
+        background-position: center center;
+    }
+}
+
+@media (max-width: 531px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .heroBoxTitle {
+        font-size: 60px;
+    }
 }
