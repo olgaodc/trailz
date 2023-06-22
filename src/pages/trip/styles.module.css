@@ -99,6 +99,11 @@
     background-color: #e05923;
 }
 
+.message {
+    font-size: 40px;
+    font-weight: 500;
+}
+
 @media (max-width: 992px) {
     .tripCard {
         width: 100%;

@@ -89,6 +89,10 @@
     justify-content: center;
 }
 
+.message {
+    font-size: 20px;
+}
+
 @media (max-width: 790px) {
     .bgImage {
         background-position: center center;

@@ -62,6 +62,7 @@ const TripPage = ({ ticket }) => {
               </div>
             </div>
           )}
+          {!trip && <div className={styles.message}>Ticket not found 😥</div>}
         </div>
       </div>
       <Footer />
@@ -78,6 +79,6 @@ export async function getServerSideProps(ctx) {
     const { data } = response;
     return { props: { ticket: data } };
   } catch (err) {
-    console.log(err);
+    return { props: { tickets: null } };
   }
 }

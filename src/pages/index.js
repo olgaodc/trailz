@@ -53,7 +53,7 @@ export default function HomePage({ tickets }) {
                 price={trip.price}
               />
             )}
-            {!trips && <div className={styles.message}>Sorry, we don't have tickets</div>}
+            {!trips && <div className={styles.message}>Tickets not found, please try later</div>}
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@ export default function HomePage({ tickets }) {
 
 export async function getServerSideProps() {
   try {
-    const response = await axios.get('https://643d6a856afd66da6af665bd.mockapi.io/tickets');
+    const response = await axios.get('https://643d6a856afd66da6af665bd.mockapi.io/ticket');
     const { data } = response;
     return { props: { tickets: data } };
   } catch (err) {
