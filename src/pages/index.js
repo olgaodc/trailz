@@ -29,8 +29,8 @@ export default function HomePage({ tickets }) {
       </Head>
       <div className={styles.bgImage}>
         <div className={styles.heroBoxWrapper}>
+          <Navbar/>
           <div className={styles.container}>
-            <Navbar />
             <div className={styles.heroBox}>
               <h1 className={styles.heroBoxTitle}>Your adventure starts here</h1>
               <p className={styles.heroBoxDescription}>We believe in a traveling experience by providing our tour plan that suits your the best!</p>

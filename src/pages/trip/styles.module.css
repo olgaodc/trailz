@@ -1,0 +1,90 @@
+.confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+  
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.tripCardWrapper {
+    margin: 80px 0;
+}
+
+.tripCardWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.tripCard {
+    width: 80%;
+    display: flex;
+    color: black;
+    background-color: rgb(197, 195, 195);
+}
+
+.tripCardImage {
+    display: block;
+    height: 500px;
+    width: 450px;
+    object-fit: cover;
+}
+
+.tripCardInfo {
+    width: calc(100% - 450px);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.tripTitleWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.tripTitle {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.tripPrice {
+    font-size: 20px;
+    font-weight: 600;
+    color: #D05525;
+}
+
+.tripDescription {
+    margin: 0;
+}
+
+.tripDateWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dateImage {
+    width: 30px;
+}
+
+.durationTitle {
+    font-weight: 500;
+}
+
+.tripButton {
+    font-family: 'Prompt', sans-serif;
+    border: none;
+    font-size: 16px;
+    padding: 8px 20px;
+    max-width: 120px;
+    cursor: pointer;
+}
