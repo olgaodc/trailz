@@ -41,7 +41,8 @@ const TripPage = ({ ticket }) => {
           {trip && (
             <div className={styles.tripCardWrapper}>
               <div className={styles.tripCard}>
-                <img className={styles.tripCardImage} src={trip.imageUrl} />
+                <div className={styles.tripCardImage} style={{backgroundImage: `url(${trip.imageUrl})`}}></div>
+
                 <div className={styles.tripCardInfo}>
                   <div className={styles.tripTitleWrapper}>
                     <h3 className={styles.tripTitle}>{trip.destination}</h3>

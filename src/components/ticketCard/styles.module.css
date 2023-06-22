@@ -1,6 +1,6 @@
 .ticketCard {
     text-decoration: none;
-    color: black;
+    color: #1c1b1b;
     width: 280px;
     display: flex;
     flex-direction: column;

@@ -5,6 +5,12 @@
     pointer-events: none;
     z-index: 9999;
 }
+
+.contentWrapper {
+    min-height: calc(100vh - 234px); 
+    display: flex;
+    align-items: center;
+}
   
 .container {
     max-width: 1300px;
@@ -13,30 +19,27 @@
 }
 
 .tripCardWrapper {
-    margin: 80px 0;
-}
-
-.tripCardWrapper {
     display: flex;
     justify-content: center;
+    margin: 80px 0;
 }
 
 .tripCard {
     width: 80%;
     display: flex;
-    color: black;
+    color: #1c1b1b;
     background-color: rgb(197, 195, 195);
 }
 
 .tripCardImage {
-    display: block;
-    height: 500px;
-    width: 450px;
-    object-fit: cover;
+    width: 50%;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center center;
 }
 
 .tripCardInfo {
-    width: calc(100% - 450px);
+    width: 50%;
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -87,4 +90,45 @@
     padding: 8px 20px;
     max-width: 120px;
     cursor: pointer;
+    background-color: #D05525;
+    color: rgb(229 228 228);
+    transition: 0.3s;
+}
+
+.tripButton:hover {
+    background-color: #e05923;
+}
+
+@media (max-width: 992px) {
+    .tripCard {
+        width: 100%;
+    }
+}
+
+@media (max-width: 699px) {
+    .tripCard {
+        flex-direction: column;
+    }
+
+    .tripCardImage, .tripCardInfo {
+        width: 100%;
+    }
+
+    .tripCardInfo {
+        padding: 25px;
+    }
+
+    .tripButton {
+        align-self: center;
+    }
+}
+
+@media (max-width: 531px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .tripCardImage {
+        min-height: 350px;
+    }
 }
