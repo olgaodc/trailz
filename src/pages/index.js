@@ -67,7 +67,7 @@ export default function HomePage({ tickets }) {
 
 export async function getServerSideProps() {
   try {
-    const response = await axios.get('https://643d6a856afd66da6af665bd.mockapi.io/ticket');
+    const response = await axios.get('https://643d6a856afd66da6af665bd.mockapi.io/tickets');
     const { data } = response;
     return { props: { tickets: data } };
   } catch (err) {
