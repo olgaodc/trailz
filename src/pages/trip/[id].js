@@ -57,7 +57,7 @@ const TripPage = ({ ticket }) => {
                     <span className={styles.durationTitle}>Duration: </span>
                     <span>{`${trip.duration} days`}</span>
                   </span>
-                  <button className={styles.tripButton} onClick={startConfetti}>Book Trip</button>
+                  <button className={styles.tripButton} onClick={startConfetti}>Book Now</button>
                 </div>
               </div>
             </div>

@@ -7,9 +7,9 @@
 }
 
 .contentWrapper {
-    min-height: calc(100vh - 234px); 
-    display: flex;
-    align-items: center;
+    min-height: calc(100vh - 314px); 
+    /* display: flex;
+    align-items: center; */
 }
   
 .container {

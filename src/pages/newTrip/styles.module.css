@@ -1,0 +1,147 @@
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.contentWrapper {
+    min-height: calc(100vh - 314px);
+}
+
+.formWrapper {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+}
+
+.form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(35, 34, 34); */
+    /* background-color: rgb(229 228 228); */
+    background-color: rgb(42, 41, 41);
+    padding: 30px 40px;
+    position: relative;
+}
+
+.formTitle {
+    /* color: #1c1b1b; */
+    margin: 0 0 30px;
+    /* text-align: center; */
+    font-size: 34px;
+}
+
+.formInputsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 45%;
+}
+
+.form input[type='text'], .form input[type='date'], .form input[type='number'], .form textarea {
+    width: 100%;
+    outline: none;
+    font-family: 'Prompt', sans-serif;
+    color: rgb(173, 171, 171);
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    padding: 0 5px 5px;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(173, 171, 171);
+}
+
+.form input[type="date"]::-webkit-calendar-picker-indicator {
+    background-image: url('../../assets/input-calendar.png');
+  }
+
+.form input::placeholder, .form textarea::placeholder {
+    color: rgb(152, 150, 150);
+}
+
+
+/* .form textarea {
+    position: relative;
+  }
+
+.form textarea::placeholder {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+} */
+
+
+.form textarea {
+    resize: none;
+    height: 60px;
+}
+
+.formButton {
+    align-self: center;
+    font-family: 'Prompt', sans-serif;
+    border: none;
+    font-size: 16px;
+    padding: 8px 20px;
+    max-width: 120px;
+    cursor: pointer;
+    background-color: #D05525;
+    color: rgb(229 228 228);
+    transition: 0.3s;
+}
+
+.formButton:hover {
+    background-color: #e05923;
+}
+
+.formImage {
+    display: inline-block;
+    position: absolute;
+    width: 55%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 65px;
+    right: 0;
+    bottom: 0;
+    clip-path: polygon(100% -115%, 20% 100%, 100% 100%);
+}
+
+.formMessage {
+    align-self: center;
+    color: #791515;
+}
+
+@media (max-width: 992px) {
+    .form {
+        width: 100%;;
+    }
+}
+
+@media (max-width: 699px) {
+    .form {
+        align-items: center;
+    }
+
+    .formInputsWrapper {
+        width: 80%;
+    }
+
+    .formImage {
+        display: none;
+    }
+}
+
+@media (max-width: 531px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .form {
+        padding: 20px 25px;
+    }
+
+    .formInputsWrapper {
+        width: 100%;
+    }
+}

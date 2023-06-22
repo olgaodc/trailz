@@ -41,7 +41,8 @@
 }
 
 .itemLink:hover {
-    border-bottom: 1px solid #D05525;
+    border-bottom: 1px solid #e05923;
+    color: #ffffff;
 }
 
 @media (max-width: 531px) {
