@@ -7,7 +7,7 @@
 }
 
 .contentWrapper {
-    min-height: calc(100vh - 314px); 
+    min-height: calc(100vh - 342.4px); 
     /* display: flex;
     align-items: center; */
 }
@@ -131,6 +131,14 @@
 @media (max-width: 531px) {
     .container {
         padding: 0 20px;
+    }
+
+    .contentWrapper {
+        min-height: calc(100vh - 302.4px); 
+    }
+
+    .tripCardWrapper {
+        margin: 60px 0;
     }
 
     .tripCardImage {

@@ -5,7 +5,7 @@
 }
 
 .contentWrapper {
-    min-height: calc(100vh - 314px);
+    min-height: calc(100vh - 342.4px); 
 }
 
 .formWrapper {
@@ -42,6 +42,7 @@
 
 .form input[type='text'], .form input[type='date'], .form input[type='number'], .form textarea {
     width: 100%;
+    height: 26.6px;
     outline: none;
     font-family: 'Prompt', sans-serif;
     color: rgb(173, 171, 171);
@@ -50,6 +51,8 @@
     border: none;
     padding: 0 5px 5px;
     background-color: transparent;
+    border: none;
+    border-radius: 0;
     border-bottom: 1px solid rgb(173, 171, 171);
 }
 
@@ -135,6 +138,14 @@
 @media (max-width: 531px) {
     .container {
         padding: 0 20px;
+    }
+
+    .contentWrapper {
+        min-height: calc(100vh - 302.4px); 
+    }
+
+    .formWrapper {
+        margin: 60px 0;
     }
 
     .form {

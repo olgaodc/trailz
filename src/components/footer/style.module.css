@@ -21,7 +21,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 .contactsItem {
@@ -38,6 +38,18 @@
     font-family: 'MuseoModerno', cursive;
 }
 
+.contactsItemLink {
+    text-decoration: none;
+    color: rgb(229 228 228);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contactsLinkImage {
+    width: 23px;
+}
+
 .socialMediaList {
     margin: 0;
     padding: 0;
@@ -49,7 +61,7 @@
     list-style-type: none;
 }
 
-.linkImage {
+.socialMediaLinkImage {
     width: 25px;
 }
 

@@ -85,7 +85,7 @@ const NewTripPage = () => {
                 />
                 <input
                   type='number'
-                  placeholder='Price'
+                  placeholder='Price, Eur'
                   value={price}
                   onChange={(event) => setPrice(event.target.value)}
                 />

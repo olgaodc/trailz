@@ -8,7 +8,7 @@ const InfoSection = () => {
   return (
     <div className={styles.infoSectionWrapper}>
       <div className={styles.container}>
-        <h3 className={styles.infoSectionTitle}>What Can We Offer for You</h3>
+        <h3 className={styles.infoSectionTitle}>What We Offer to You</h3>
         <div className={styles.infoSection}>
           <div className={styles.infoCard}>
             <span className={styles.infoCardTitle}>Various Destinations</span>
@@ -27,7 +27,7 @@ const InfoSection = () => {
         <div className={styles.aboutSection}>
           <div className={styles.aboutSectionTitleWrapper}>
             <h2 className={styles.aboutSectionTitle}>Discover the world in a new way</h2>
-            <p className={styles.aboutSectionDescription}>We believe in a traveling experience by providing our tour plan that suits your the best!</p>
+            <p className={styles.aboutSectionDescription}>Get ready to venture into captivating destinations, uncover hidden treasures, and engage with diverse cultures. From breathtaking landscapes to vibrant cities, our curated trips will ignite your sense of wonder and leave you with unforgettable memories. Join us and embark on a transformative travel experience that will redefine the way you see the world.</p>
           </div>
 
           <img className={styles.aboutSectionImage} src={tripImage.src} />

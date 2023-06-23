@@ -108,4 +108,9 @@
     .heroBoxTitle {
         font-size: 60px;
     }
+
+    .tripsSectionWrapper {
+        margin: 50px 0 80px;
+        padding-top: 30px;
+    }
 }

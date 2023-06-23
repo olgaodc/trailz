@@ -33,7 +33,7 @@ export default function HomePage({ tickets }) {
           <div className={styles.container}>
             <div className={styles.heroBox}>
               <h1 className={styles.heroBoxTitle}>Your adventure starts here</h1>
-              <p className={styles.heroBoxDescription}>We believe in a traveling experience by providing our tour plan that suits your the best!</p>
+              <p className={styles.heroBoxDescription}>Enrich your traveling experience with our personalized tour plan that suit you the best!</p>
               <button className={styles.heroBoxButton} onClick={scrollDown}>Explore now</button>
             </div>
           </div>
