@@ -112,7 +112,8 @@
 
 .formMessage {
     align-self: center;
-    color: #791515;
+    color: #8a1313;
+    font-weight: 500;
 }
 
 @media (max-width: 992px) {

@@ -19,32 +19,98 @@ const NewTripPage = () => {
   const [message, setMessage] = useState('');
 
   const createTrip = async () => {
-    try {
-      const response = await axios.post('https://643d6a856afd66da6af665bd.mockapi.io/tickets', {
-        destination: destination,
-        date: date,
-        duration: duration,
-        price: price,
-        imageUrl: image,
-        description: description,
-      });
-
-      console.log(response);
-
-      setTimeout(() => {
-        router.push('/');
-      }, 500);
-
-    } catch (err) {
-      setMessage('Error, please try later');
-
-      setTimeout(() => {
+    if (!formValidation()) {
+      try {
+        const response = await axios.post('https://643d6a856afd66da6af665bd.mockapi.io/tickets', {
+          destination: destination,
+          date: date,
+          duration: duration,
+          price: price,
+          imageUrl: image,
+          description: description,
+        });
+  
+        console.log(response);
         setMessage('');
-      }, 1000);
+        clearAllInputs();
+        
+  
+        setTimeout(() => {
+          router.push('/');
+        }, 500);
+  
+      } catch (err) {
+        setMessage('Error, please try later');
+  
+        setTimeout(() => {
+        }, 1500);
+  
+        console.log(err);
+      }
+    }
+  }
 
-      console.log(err);
+  const formValidation = () => {
+    if (!destination || !date || !duration || !price || !image || !description) {
+      setMessage('Please fill all fields');
+      return true;
     }
 
+    if (destination.length < 5) {
+      setMessage(`Destination can't be less than 5 characters`);
+      return true;
+    }
+
+    if (destination.length > 30) {
+      setMessage(`Destination can't be more than 30 characters`);
+      return true;
+    }
+
+    const today = new Date;
+    const tripDate = Date.parse(date);
+
+    if (tripDate < today) {
+      setMessage(`Can't be past date`);
+      return true;
+    }
+
+    if (duration < 1) {
+      setMessage(`Duration can't be less than 1`);
+      return true;
+    }
+
+    if (duration > 40) {
+      setMessage(`Duration can't be more than 50`);
+      return true;
+    }
+
+    if (price < 0) {
+      setMessage(`Price can't be less than 0`);
+      return true;
+    }
+
+    if (price > 100000) {
+      setMessage(`Price can't be more than 100000`);
+      return true;
+    }
+
+    if (image.length < 10) {
+      setMessage(`Image URL can't be less than 10 characters`);
+      return true;
+    }
+
+    if (description.length < 30) {
+      setMessage(`Description can't be less than 30 characters`);
+      return true;
+    }
+
+    if (description.length > 500) {
+      setMessage(`Description can't be more than 300 characters`);
+      return true;
+    }
+
+    setMessage('');
+    return false;
   }
 
   const clearAllInputs = () => {
@@ -67,7 +133,7 @@ const NewTripPage = () => {
               <div className={styles.formInputsWrapper}>
                 <input
                   type='text'
-                  placeholder='Destination'
+                  placeholder='Destination (city, country)'
                   value={destination}
                   onChange={(event) => setDestination(event.target.value)}
                 />
@@ -79,7 +145,7 @@ const NewTripPage = () => {
                 />
                 <input
                   type='number'
-                  placeholder='Duration'
+                  placeholder='Duration, days'
                   value={duration}
                   onChange={(event) => setDuration(event.target.value)}
                 />
@@ -102,7 +168,7 @@ const NewTripPage = () => {
                 ></textarea>
                 <button
                   className={styles.formButton}
-                  onClick={() => { createTrip(); clearAllInputs() }}
+                  onClick={createTrip}
                 >
                   Create
                 </button>
